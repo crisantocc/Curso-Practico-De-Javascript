@@ -12,3 +12,10 @@ const transsactions = [
 const totalBalance = transsactions.reduce((acc, transaction) => acc + transaction.amount,0)
 console.log('Total Balance ', totalBalance)
 
+// 2. Find the Largest Transaction (Income or Expense)
+
+const largestTransaction = transsactions.reduce((maxTransaction, transaction) => {
+     return Math.abs(transaction.amount) > Math.abs(maxTransaction.amount) ? transaction : maxTransaction
+}, transsactions[0])
+
+console.log('Largest Transaction', largestTransaction)
