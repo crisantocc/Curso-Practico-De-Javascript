@@ -1,0 +1,13 @@
+/*
+while(condicion){
+    codigo
+}
+
+Ejecuta la validacion antes que el codigo
+*/
+let contador = 0;
+
+while (contador < 10){
+    console.log(contador);
+    contador++;
+}
