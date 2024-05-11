@@ -24,3 +24,8 @@ console.log('Largest Transaction', largestTransaction)
 
 const purchaseTransactions = transactions.filter(transaction => transaction.amount < 0)
 console.log(purchaseTransactions)
+
+// 4. Find a transaction by Description
+
+const specificTransaction = transactions.find(transaction => transaction.description === 'Online Purchase')
+console.log('Specific Transaction: ', specificTransaction)
