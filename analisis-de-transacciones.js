@@ -29,3 +29,17 @@ console.log(purchaseTransactions)
 
 const specificTransaction = transactions.find(transaction => transaction.description === 'Online Purchase')
 console.log('Specific Transaction: ', specificTransaction)
+
+// 5. Find the index of a Transaction by Amout.
+
+const indexTransactionWithAmout = transactions.findIndex(transaction => transaction.amount === -30)
+console.log('Index Transaction with Amount: -30', indexTransactionWithAmout)
+// 6. Update Transaction Description 
+transactions.forEach(transaction => {
+    if(transaction.amount < 0){
+        transaction.description = `Expense: ${transaction.description}`
+    }else{
+        transaction.description = `Income: ${transaction.description}`
+    }
+})
+console.log('Updated Transactions: ', transactions)
