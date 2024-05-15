@@ -27,3 +27,28 @@ console.log(lastIndex1)
 
 const lastIndex2 = numbersAgan.lastIndexOf(3)
 console.log(lastIndex2)
+
+// Excercise * Findid Substring Indices
+
+const stringArray = ['apple','banana', 'orange','grape','banana', 'kiwi']
+const target = 'bannana'
+
+function findStringIndicesInArray (array, target){
+    const result = {
+        includesTargetString: false,
+        first0ccurrenceIndex: -1,
+        last0ccurrenceIndex: -1
+    }
+
+    array.forEach((element, index) => {
+        if(element.includes(target)) {
+            result.includesTargetString = true
+            result.first0ccurrenceIndex = array.indexOf(target)
+            result.first0ccurrenceIndex = array.lastIndexOf(target)
+        }
+    })
+    return result
+}
+const result = findStringIndicesInArray(stringArray, target)
+
+console.log(result)
