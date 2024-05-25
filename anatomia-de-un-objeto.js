@@ -37,3 +37,7 @@ persona.despedir = () => {
 }
 
 console.log(persona.despedir())
+
+console.log(persona.dirrecion.calle)
+
+delete persona.telefono
